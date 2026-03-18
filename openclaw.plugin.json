@@ -1,0 +1,108 @@
+{
+  "id": "openclaw-ai-cli-runner",
+  "name": "OpenClaw AI CLI Runner",
+  "version": "0.1.0",
+  "description": "Run whitelisted local AI CLI commands as asynchronous OpenClaw tools.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "allowedCommands": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "default": [
+          "claude",
+          "codex",
+          "gemini"
+        ]
+      },
+      "allowedWorkingDirs": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "default": [
+          "/workspace",
+          "/home/pc/.openclaw/workspace/cc-jobs"
+        ]
+      },
+      "defaultWorkingDir": {
+        "type": "string",
+        "minLength": 1,
+        "default": "/home/pc/.openclaw/workspace/cc-jobs"
+      },
+      "commandPrefix": {
+        "type": "string",
+        "minLength": 1,
+        "default": "/cc"
+      },
+      "defaultTimeoutSeconds": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 900
+      },
+      "maxLogChars": {
+        "type": "integer",
+        "minimum": 4000,
+        "default": 4000
+      },
+      "previewFlushBytes": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 1024
+      },
+      "previewFlushIntervalMs": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 500
+      },
+      "maxConcurrentJobs": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 4
+      },
+      "deliverToChannelOnCompletion": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  },
+  "uiHints": {
+    "allowedCommands": {
+      "label": "Allowed Commands",
+      "placeholder": "[\"claude\", \"codex\", \"gemini\"]"
+    },
+    "allowedWorkingDirs": {
+      "label": "Allowed Working Directories",
+      "placeholder": "[\"/workspace\", \"/Users/foo/projects\"]"
+    },
+    "defaultWorkingDir": {
+      "label": "Default Working Directory"
+    },
+    "commandPrefix": {
+      "label": "Command Prefix"
+    },
+    "defaultTimeoutSeconds": {
+      "label": "Default Timeout (seconds)"
+    },
+    "maxLogChars": {
+      "label": "Max Final Log Characters"
+    },
+    "previewFlushBytes": {
+      "label": "Preview Flush Bytes"
+    },
+    "previewFlushIntervalMs": {
+      "label": "Preview Flush Interval (ms)"
+    },
+    "maxConcurrentJobs": {
+      "label": "Max Concurrent Jobs"
+    },
+    "deliverToChannelOnCompletion": {
+      "label": "Deliver Completion To Channel"
+    }
+  }
+}

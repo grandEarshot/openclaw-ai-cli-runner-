@@ -1,11 +1,29 @@
 {
-  "name": "openclaw-ai-cli-runner",
+  "name": "@voterai/openclaw-ai-cli-runner",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "description": "OpenClaw plugin that runs whitelisted AI CLIs as asynchronous jobs.",
+  "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/grandEarshot/openclaw-ai-cli-runner-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grandEarshot/openclaw-ai-cli-runner-/issues"
+  },
+  "homepage": "https://github.com/grandEarshot/openclaw-ai-cli-runner-#readme",
   "engines": {
     "node": ">=24.0.0"
+  },
+  "files": [
+    "README.md",
+    "openclaw.plugin.json",
+    "src",
+    "tsconfig.json"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "openclaw": {
     "extensions": [

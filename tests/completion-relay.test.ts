@@ -184,7 +184,7 @@ test("CompletionRelay formats Claude Code completion receipts for cc jobs", asyn
       label: "cc:short",
       cliCmd: "claude",
       args: ["-p", "run analysis", "--output-format", "text", "--dangerously-skip-permissions"],
-      workingDir: "/home/pc/projects",
+      workingDir: "/workspace/projects",
       timeoutSeconds: 30,
       notifyOnCompletion: true,
       originSessionKey: fixture.sessionKey,
@@ -220,7 +220,7 @@ test("CompletionRelay formats Claude Code completion receipts for cc jobs", asyn
     assert.equal(transcript.includes("Claude Code任务完成"), true);
     assert.equal(transcript.includes("任务ID:job-cc-1"), true);
     assert.equal(transcript.includes("任务:run analysis"), true);
-    assert.equal(transcript.includes("路径:/home/pc/projects"), true);
+    assert.equal(transcript.includes("路径:/workspace/projects"), true);
     assert.equal(transcript.includes("项目文件:"), true);
     assert.equal(transcript.includes("ARCHITECTURE.md"), true);
     assert.equal(transcript.includes("engine.js"), true);
@@ -241,7 +241,7 @@ test("CompletionRelay falls back to summary when no project files are detected",
       label: "cc:short",
       cliCmd: "claude",
       args: ["-p", "summarize logs", "--output-format", "text", "--dangerously-skip-permissions"],
-      workingDir: "/home/pc/projects",
+      workingDir: "/workspace/projects",
       timeoutSeconds: 30,
       notifyOnCompletion: true,
       originSessionKey: fixture.sessionKey,

@@ -62,7 +62,7 @@
 在本机执行：
 
 ```bash
-openclaw plugins install -l /home/pc/claw-link-cli
+openclaw plugins install -l /path/to/claw-link-cli
 ```
 
 如果你已经安装过，也可以用以下命令检查：
@@ -83,8 +83,8 @@ openclaw plugins list
         enabled: true,
         config: {
           allowedCommands: ["claude", "codex", "gemini"],
-          allowedWorkingDirs: ["/workspace", "/home/pc/.openclaw/workspace/cc-jobs"],
-          defaultWorkingDir: "/home/pc/.openclaw/workspace/cc-jobs",
+          allowedWorkingDirs: ["/workspace", "/workspace/cc-jobs"],
+          defaultWorkingDir: "/workspace/cc-jobs",
           commandPrefix: "/cc",
           defaultTimeoutSeconds: 900,
           maxLogChars: 4000,
@@ -136,7 +136,7 @@ openclaw plugins list
 示例：
 
 ```json
-["/home/pc/.openclaw/workspace/cc-jobs", "/workspace"]
+["/workspace/cc-jobs", "/workspace"]
 ```
 
 ### `defaultWorkingDir`
@@ -204,7 +204,7 @@ openclaw plugins list
 指定目录执行：
 
 ```text
-/cc 给这个项目补一份中文 README @/home/pc/.openclaw/workspace/cc-jobs/demo
+/cc 给这个项目补一份中文 README @/workspace/cc-jobs/demo
 ```
 
 让 Claude Code 解释模型信息：
@@ -220,7 +220,7 @@ openclaw plugins list
 ```text
 已派发 Claude Code
 任务:你是什么模型
-目录:/home/pc/.openclaw/workspace/cc-jobs
+目录:/workspace/cc-jobs
 任务ID:xxxx
 完成后会自动通知到你。
 ```
@@ -230,7 +230,7 @@ openclaw plugins list
 ```text
 Claude Code任务完成
 任务:你是什么模型
-路径:/home/pc/.openclaw/workspace/cc-jobs
+路径:/workspace/cc-jobs
 任务ID:xxxx
 摘要:...
 ```

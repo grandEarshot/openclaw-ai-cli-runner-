@@ -27,13 +27,13 @@
         },
         "default": [
           "/workspace",
-          "/home/pc/.openclaw/workspace/cc-jobs"
+          "/workspace/cc-jobs"
         ]
       },
       "defaultWorkingDir": {
         "type": "string",
         "minLength": 1,
-        "default": "/home/pc/.openclaw/workspace/cc-jobs"
+        "default": "/workspace/cc-jobs"
       },
       "commandPrefix": {
         "type": "string",

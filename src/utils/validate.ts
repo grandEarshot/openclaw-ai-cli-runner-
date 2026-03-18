@@ -5,8 +5,8 @@ import { PLUGIN_ID } from "../types.ts";
 
 const DEFAULT_CONFIG: PluginConfig = {
   allowedCommands: ["claude", "codex", "gemini"],
-  allowedWorkingDirs: ["/workspace", "/home/pc/.openclaw/workspace/cc-jobs"],
-  defaultWorkingDir: "/home/pc/.openclaw/workspace/cc-jobs",
+  allowedWorkingDirs: ["/workspace", "/workspace/cc-jobs"],
+  defaultWorkingDir: "/workspace/cc-jobs",
   commandPrefix: "/cc",
   defaultTimeoutSeconds: 900,
   maxLogChars: 4000,

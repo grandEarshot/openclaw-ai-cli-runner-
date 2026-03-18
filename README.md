@@ -62,13 +62,19 @@
 在本机执行：
 
 ```bash
-openclaw plugins install -l /path/to/claw-link-cli
+openclaw plugins install @voterai/openclaw-ai-cli-runner
 ```
 
 如果你已经安装过，也可以用以下命令检查：
 
 ```bash
 openclaw plugins list
+```
+
+如果你是在本地开发这个插件，而不是从 npm 安装，可以使用链接模式：
+
+```bash
+openclaw plugins install -l /path/to/claw-link-cli
 ```
 
 ### 2. 配置 OpenClaw
